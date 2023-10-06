@@ -55,7 +55,7 @@ build:
 		.
 
 kind-load:
-	cd infrastructure/k8s/kind/boost-sales-pod; kustomize edit set image bersennaidoo/boost-sales-api=bersennaidoo/boost-sales-api:$(VERSION)
+	cd infrastructure/k8s/kind/boost-sales-pod; kustomize edit set image boost-sales-api=bersennaidoo/boost-sales-api:$(VERSION)
 	kind load docker-image bersennaidoo/boost-sales-api:$(VERSION) --name $(KIND_CLUSTER)
 
 kind-apply:
@@ -87,4 +87,7 @@ kind-update-apply: build kind-load kind-apply
 
 kind-status-boost-sales:
 	kubectl get po -o wide -w -n boost-sales-system
+
+tidy:
+	go mod tidy
 
