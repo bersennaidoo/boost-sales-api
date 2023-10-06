@@ -1,6 +1,6 @@
 SHELL := /bin/bash
 
-GOLANG          := golang:1.21
+GOLANG          := golang:1.21-alpine
 ALPINE          := alpine:3.18
 KIND            := kindest/node@sha256:3966ac761ae0136263ffdb6cfd4db23ef8a83cba8a463690e98317add2c9ba72
 POSTGRES        := postgres:15.3
@@ -14,7 +14,7 @@ NAMESPACE       := boost-sales-system
 APP             := boost-sales
 BASE_IMAGE_NAME := bersennaidoo
 SERVICE_NAME    := boost-sales-api
-VERSION         := 1.0
+VERSION         := 1.0.0
 SERVICE_IMAGE   := $(BASE_IMAGE_NAME)/$(SERVICE_NAME):$(VERSION)
 METRICS_IMAGE   := $(BASE_IMAGE_NAME)/$(SERVICE_NAME)-metrics:$(VERSION)
 
@@ -55,7 +55,7 @@ build:
 		.
 
 kind-load:
-	cd infrastructure/k8s/kind/base/boost-sales-pod; kustomize edit set bersennaidoo/image boost-sales-api=bersennaidoo/boost-sales-api:$(VERSION)
+	cd infrastructure/k8s/kind/boost-sales-pod; kustomize edit set image bersennaidoo/boost-sales-api=bersennaidoo/boost-sales-api:$(VERSION)
 	kind load docker-image bersennaidoo/boost-sales-api:$(VERSION) --name $(KIND_CLUSTER)
 
 kind-apply:
