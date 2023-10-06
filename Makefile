@@ -14,7 +14,7 @@ NAMESPACE       := boost-sales-system
 APP             := boost-sales
 BASE_IMAGE_NAME := bersennaidoo
 SERVICE_NAME    := boost-sales-api
-VERSION         := 1.0.0
+VERSION         := 2.0.0
 SERVICE_IMAGE   := $(BASE_IMAGE_NAME)/$(SERVICE_NAME):$(VERSION)
 METRICS_IMAGE   := $(BASE_IMAGE_NAME)/$(SERVICE_NAME)-metrics:$(VERSION)
 

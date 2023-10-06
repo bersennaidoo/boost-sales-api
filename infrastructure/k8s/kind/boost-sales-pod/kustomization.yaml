@@ -5,9 +5,6 @@ resources:
 patchesStrategicMerge:
 - ./kind-boost-sales-patch.yaml
 images:
-- name: bersennaidoo/boost-sales-api
-  newName: bersennaidoo/boost-sales-api
-  newTag: 1.0.0
 - name: boost-sales-api
   newName: bersennaidoo/boost-sales-api
-  newTag: 1.0.0
+  newTag: 2.0.0
