@@ -34,7 +34,7 @@ init-go:
 
 
 run:
-	go run application/services/transport/rest/boost-sales-api/main.go
+	go run application/services/transport/rest/boost-sales-api/main.go | go run application/tooling/logfmt/main.go
 
 test:
 	go test ./... -count=1
@@ -76,7 +76,7 @@ kind-status:
 
 
 kind-logs:
-	kubectl logs -l app=boost-sales --all-containers=true -f --tail=100 -n boost-sales-system
+	kubectl logs -l app=boost-sales --all-containers=true -f --tail=100 -n boost-sales-system | go run application/tooling/logfmt/main.go
 
 kind-restart:
 	kubectl rollout restart deployment boost-sales-pod -n boost-sales-system
