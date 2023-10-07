@@ -1,5 +1,9 @@
 SHELL := /bin/bash
 
+#
+# metrics-view-local-sc:
+# expvarmon -ports="localhost:4000" -vars="build,requests,goroutines,errors,panics,mem:memstats.Alloc"
+
 GOLANG          := golang:1.21-alpine
 ALPINE          := alpine:3.18
 KIND            := kindest/node@sha256:3966ac761ae0136263ffdb6cfd4db23ef8a83cba8a463690e98317add2c9ba72
