@@ -1,3 +1,5 @@
+package validate
+
 import (
 	"errors"
 	"reflect"
@@ -64,4 +66,3 @@ func CheckID(id string) error {
 	}
 	return nil
 }
-

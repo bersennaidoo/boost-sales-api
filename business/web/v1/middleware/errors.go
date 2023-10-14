@@ -6,6 +6,7 @@ import (
 
 	"github.com/bersennaidoo/boost-sales-api/business/system/validate"
 	v1Web "github.com/bersennaidoo/boost-sales-api/business/web/v1"
+	"github.com/bersennaidoo/boost-sales-api/library/web"
 	"go.uber.org/zap"
 )
 
