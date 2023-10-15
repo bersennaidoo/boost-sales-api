@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/dimfeld/httptreemux/v5"
-	"go.opentelemetry.io/otel/trace"
+	"github.com/google/uuid"
 )
 
 type Handler func(ctx context.Context, w http.ResponseWriter, r *http.Request) error
@@ -49,10 +49,8 @@ func (a *App) Handle(method string, group string, path string, handler Handler, 
 
 		ctx := r.Context()
 
-		span := trace.SpanFromContext(ctx)
-
 		v := Values{
-			TraceID: span.SpanContext().TraceID().String(),
+			TraceID: uuid.New().String(),
 			Now:     time.Now(),
 		}
 		ctx = context.WithValue(ctx, key, &v)

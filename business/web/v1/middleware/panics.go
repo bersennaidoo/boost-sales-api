@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"runtime/debug"
 
-	"github.com/bersennaidoo/boost-sales-api/business/system/metrics"
-	"github.com/bersennaidoo/boost-sales-api/library/web"
+	"github.com/bersennaidoo/mserve/business/system/metrics"
+	"github.com/bersennaidoo/mserve/library/web"
 )
 
 func Panics() web.Middleware {

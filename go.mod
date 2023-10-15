@@ -1,4 +1,4 @@
-module github.com/bersennaidoo/boost-sales-api
+module github.com/bersennaidoo/mserve
 
 go 1.21.0
 

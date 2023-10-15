@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/bersennaidoo/boost-sales-api/library/web"
+	"github.com/bersennaidoo/mserve/library/web"
 	"go.uber.org/zap"
 )
 

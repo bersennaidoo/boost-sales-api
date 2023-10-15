@@ -4,9 +4,9 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/bersennaidoo/boost-sales-api/business/system/validate"
-	v1Web "github.com/bersennaidoo/boost-sales-api/business/web/v1"
-	"github.com/bersennaidoo/boost-sales-api/library/web"
+	"github.com/bersennaidoo/mserve/business/system/validate"
+	v1Web "github.com/bersennaidoo/mserve/business/web/v1"
+	"github.com/bersennaidoo/mserve/library/web"
 	"go.uber.org/zap"
 )
 
