@@ -1,6 +1,6 @@
 # mserve
 
-A microservices framework
+A microservices framework for reuse.
 
 ## Dependencies
 
