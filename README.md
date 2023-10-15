@@ -15,4 +15,4 @@ A microservices framework
 `sudo make install-go`
 
 ### Configuration settings
-`go run application/services/transport/rest/boost-sales-api/main.go --help`
+`go run application/services/transport/rest/mserve/main.go --help`
