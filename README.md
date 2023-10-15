@@ -1,4 +1,6 @@
-# boost-sales-api 
+# mserve
+
+A microservices framework
 
 ## Dependencies
 
