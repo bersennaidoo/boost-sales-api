@@ -19,7 +19,7 @@ RUN go build -ldflags "-X main.build=${BUILD_REF}"
 FROM scratch
 ARG BUILD_DATE
 ARG BUILD_REF
-#COPY --from=build_sales-api /service/zarf/keys/. /service/zarf/keys/.
+COPY --from=build_sales-api /service/infrastructure/keys/. /service/infrastructure/keys/.
 #COPY --from=build_sales-api /service/app/tooling/admin/admin /service/admin
 COPY --from=build_sales-api /service/application/services/transport/rest/boost-sales-api/boost-sales-api /service/boost-sales-api
 WORKDIR /service

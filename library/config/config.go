@@ -18,11 +18,11 @@ type Config struct {
 		IdleTimeout     time.Duration `conf:"default:120s"`
 		ShutdownTimeout time.Duration `conf:"default:20s,mask"`
 	}
-	/*Auth struct {
-		KeysFolder string `conf:"default:zarf/keys/"`
+	Auth struct {
+		KeysFolder string `conf:"default:infrastructure/keys/"`
 		ActiveKID  string `conf:"default:54bb2165-71e1-41a6-af3e-7da4a0e1e2c1"`
 	}
-	DB struct {
+	/*DB struct {
 		User         string `conf:"default:postgres"`
 		Password     string `conf:"default:postgres,mask"`
 		Host         string `conf:"default:localhost"`
